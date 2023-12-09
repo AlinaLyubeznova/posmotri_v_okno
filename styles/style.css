@@ -38,7 +38,6 @@ ol {
 }
 
 .page {
-  inline-size: 1200px;
   block-size: 100%;
   margin: 0;
   color: #fff;
@@ -98,6 +97,7 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .content__video-card-thumbnail {
@@ -128,9 +128,23 @@ ol {
   text-transform: uppercase;
 }
 
+.content__list-item {
+  display: flex;
+  width: 100%;
+}
+
 .content__card-link {
+  display: flex;
+  width: 100%;
+  padding: 1px;
   color: currentColor;
   text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.content__card-link:focus-visible {
+  outline: none;
+  border-color: #fff;
 }
 
 .content__video-card-title {
@@ -188,8 +202,10 @@ ol {
 }
 
 .search-form__textfield:focus-visible,
+.search-form__label:has(.search-form__checkbox:focus-visible),
 .button:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .button:hover,
